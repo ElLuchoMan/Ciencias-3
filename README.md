@@ -7,4 +7,4 @@
 ## Ejercicios Estructuras De Datos (`Estructuras/`)
 #### Hopital `hospital/eject.py`
 #### Peliculas `Peliculas/peliculas.py`
-#### Posfijo `Posfijo/calculadora.py`
+#### Posfijo `Posfijo/main.py`
