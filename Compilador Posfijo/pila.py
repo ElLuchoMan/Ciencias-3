@@ -1,7 +1,10 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 class Pila:
     """ Representa una pila con operaciones de apilar, desapilar y
         verificar si esta vacia. """
- 
+
     def __init__(self):
         """ Crea una pila vacia. """
         # La pila vacia se representa con una lista vacia
@@ -23,3 +26,7 @@ class Pila:
     def es_vacia(self):
         """ Devuelve True si la lista esta vacia, False si no. """
         return self.items == []
+
+    def get_size(self):
+        """ Devuelve el tamaño del arreglo """
+        return len(self.items)
