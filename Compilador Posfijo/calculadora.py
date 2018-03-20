@@ -2,14 +2,28 @@
 # -*- coding: utf-8 -*-
 
 from pila import *
+from cola import *
+
+class Variable:
+
+    def __init__(self,nombre,valor):
+        self.nombre = nombre
+        self._valor = valor
+
+    def set_valor(self,valor):
+        self._valor = valor
+
+    def get_valor(self):
+        return self._valor
 
 class Calculadora:
 
     def __init__(self):
         self.pila = Pila()
+        self.variables = Cola()
         self.operadores = ['-','+','*','/']
 
-    def posOrden(self,op):
+    def pos_orden(self,op):
         # Inicializa un nuevo objeto tipo Pila
         self.pila.__init__()
         for i in op:
@@ -32,13 +46,31 @@ class Calculadora:
                             return "Error - Division por cero"
                 else:
                     return "Error - Operación incompleta faltan operandos"
-            # Todo lo que no se una operación lo apila
-            # TODO: Faltaria un elif para comparar si es una variable ej: x,y,z
-            else:
+            # Compara si es un digito, de serlo lo apila
+            elif i.isdigit():
                 try:
                     self.pila.apilar(float(i))
                 except ValueError:
                     return "Error - Valor no valido: '" + i + "'"
+            else:
+                # En caso de tener un "=" se crea una nueva Variable
+                if i.find("=") != -1:
+                    val = self.pila.desapilar()
+                    self.pila.apilar(val)
+                    self.variables.encolar(Variable(i.strip("="),val))
+                # Cuando existe una variable su valor interno se apila para ser operado
+                else:
+                    j = 0
+                    tam = self.variables.get_size();
+                    while j < tam:
+                        var = self.variables.desencolar()
+                        self.variables.encolar(var)
+                        if i == var.nombre:
+                            self.pila.apilar(var.get_valor())
+                            break
+                        j+=1
+                    else:
+                        return "Error - No se encontro la variable: '" + i + "'"
         # Tiene que existir un unico valor en la pila al finalizar las operaciones
         if self.pila.get_size() == 1:
             return self.pila.desapilar()

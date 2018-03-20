@@ -7,4 +7,4 @@ cal = Calculadora()
 
 for i in content:
     content = i.strip('\n').split(' ')
-    print(cal.posOrden(content))
+    print(cal.pos_orden(content))
