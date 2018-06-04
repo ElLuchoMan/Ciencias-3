@@ -1,11 +1,17 @@
 class Recurso:
+
+  def __init__(this):
+      estado = Estado()
+      categoria = Categoria()
+      historial = Historial()
+
   def __init__(this,codigo,nombre,descripcion):
-    this.codigo=codigo
-    this.nombre=nombre
-    this.descripcion=descripcion
-    estado = Estado()
-    categoria = Categoria()
-    historial = Historial()
+      this.codigo=codigo
+      this.nombre=nombre
+      this.descripcion=descripcion
+      estado = Estado()
+      categoria = Categoria()
+      historial = Historial()
 
   def getCodigo():
     return this.codigo

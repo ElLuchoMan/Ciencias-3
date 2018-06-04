@@ -1,8 +1,11 @@
 class Estado:
+
+  def __init__(this):
+
   def __init__(this,codigo,nombre,descripcion):
-    this.codigo=codigo
-    this.nombre=nombre
-    this.descripcion=descripcion
+      this.codigo=codigo
+      this.nombre=nombre
+      this.descripcion=descripcion
 
   def getCodigo():
     return this.codigo

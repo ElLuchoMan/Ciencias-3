@@ -1,7 +1,10 @@
 class Historial:
+
+  def __init__(this):
+
   def __init__(this,codigo,historial):
-    this.codigo=codigo
-    this.historial=historial
+      this.codigo=codigo
+      this.historial=historial
 
   def getCodigo():
     return this.codigo

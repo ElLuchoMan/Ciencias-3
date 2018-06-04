@@ -1,9 +1,12 @@
 class Categoria:
+
+  def __init__(this):
+
   def __init__(this,codigo,nombre,tiempo,descripcion):
-    this.codigo=codigo
-    this.nombre=nombre
-    this.tiempo=tiempo
-    this.descripcion=descripcion
+      this.codigo=codigo
+      this.nombre=nombre
+      this.tiempo=tiempo
+      this.descripcion=descripcion
 
   def getCodigo():
     return this.codigo

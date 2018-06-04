@@ -1,12 +1,17 @@
 class Cuenta:
+
+  def __init__(this):
+      estado = Estado()
+      historial = Historial()
+
   def __init__(this,codigo,nombre,apellido,mail,telefono):
-    this.codigo=codigo
-    this.nombre=nombre
-    this.apellido=apellido
-    this.mail=mail
-    this.telefono=telefono
-    estado = Estado()
-    historial = Historial()
+      this.codigo=codigo
+      this.nombre=nombre
+      this.apellido=apellido
+      this.mail=mail
+      this.telefono=telefono
+      estado = Estado()
+      historial = Historial()
 
   def getCodigo():
     return this.codigo

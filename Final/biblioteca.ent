@@ -1,12 +1,12 @@
 entity Prestamo {
   codigo : integer      // Codigo unico del prestamo
+  fechaIn : string      // Fecha de registro del prestamo
+  fechaFin : string     // Fecha de finalizacion del prestamo
+  fechaOut : string     // Fecha de devolución del recurso
+  observacion : string  // Observaciones opcionales del prestamo
   recurso : Recurso     // Recurso que se va a prestar
   cuenta : Cuenta       // Cuenta a la que se le hace el prestamo
   estado : Estado       // Estado del prestamo
-  fechaI : string       // Fecha de registro del prestamo
-  fechaF : string       // Fecha de finalizacion del prestamo
-  fechaO : string       // Fecha de devolución del recurso
-  observacion : string  // Observaciones opcionales del prestamo
 }
 
 entity Recurso {
