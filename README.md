@@ -12,14 +12,14 @@
 ## Ejercicio Parse /- (`Parser/`)
 #### `parser_prueba.py`
 
-## Trbajo Final /- (`Final/`)
-#### Dependecias
+## Trabajo Final /- (`Final/`)
+### Dependecias
 
-  $ pip install Jinja2
-  $ pip install textX
+  `$ pip install Jinja2`
+  `$ pip install textX`
 
 ### Run
 
-  $ python2.7 entity_codegen.py
+  `$ python2.7 entity_codegen.py`
 
 ### Source: (https://github.com/apdaza/textX_entity2)
