@@ -62,5 +62,14 @@ def main(debug=False):
                        "%s.py" % entity.name.capitalize()), 'w') as f:
             f.write(template.render(entity=entity))
 
+	#Load template
+    template = jinja_env.get_template('c++.template')
+
+    for entity in biblioteca_model.entities:
+        # For each entity generate java file
+        with open(join(srcgen_folder,
+                       "%s.cpp" % entity.name.capitalize()), 'w') as f:
+            f.write(template.render(entity=entity))
+
 if __name__ == "__main__":
     main()
